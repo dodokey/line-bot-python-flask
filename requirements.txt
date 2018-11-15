@@ -1,0 +1,9 @@
+line-bot-sdk
+flask
+psycopg2
+schedule
+requests
+xmltodict
+giphy_client
+beautifulsoup4
+lxml
