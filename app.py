@@ -43,6 +43,7 @@ def schedules():
         time.sleep(1)
 
 
+        
 # 建立一個子執行緒
 t = threading.Thread(target=schedules)
 # 執行該子執行緒
@@ -66,7 +67,9 @@ schedule.every().day.at("11:59").do(announce, ttp="吃飯囉喔喔喔~")
 schedule.every().day.at("17:59").do(announce, ttp="大家吃晚餐了嗎\nヽ(●´∀`●)ﾉ")
 schedule.every().day.at("16:00").do(announce, ttp="肚子餓惹ˊˋ")
 # schedule.every(1).hour.do(imRfaa, paramettt='hi')
-
+@app.route('/', methods=['GET'])
+def index():
+    return "Hello 20181118888"
 
 @app.route("/callback", methods=['POST'])
 def callback():
