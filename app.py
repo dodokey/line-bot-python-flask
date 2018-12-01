@@ -65,10 +65,12 @@ handler = WebhookHandler(LineBothandler)
 # schedule.every().day.at("16:00").do(announce, ttp="肚子餓惹ˊˋ")
 # # schedule.every(1).hour.do(imRfaa, paramettt='hi')
 
+txttt = ''
+
 
 @app.route('/', methods=['GET'])
 def index():
-    return "Hello 20181118888"
+    return txttt
 
 
 @app.route("/callback", methods=['POST'])
@@ -102,6 +104,7 @@ def handle_post_message(event):
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
+    global txttt
     # event.message.text:對方傳來的文字訊息
     print('-----hoyoooooooooooo------------------------')
     thstext = event.message.text
@@ -114,6 +117,7 @@ def handle_message(event):
         to = event.source.user_id
     message = TextSendMessage(text=thstext + '\nˊˋ')
     line_bot_api.reply_message(event.reply_token, message)
+    txttt = thstext
     # to: get ID (Group first)
 
     # 存下對方傳來的訊息
