@@ -5,6 +5,7 @@ from linebot.models import *
 import os
 import psycopg2
 import random
+from flask_cors import CORS
 
 
 import time
