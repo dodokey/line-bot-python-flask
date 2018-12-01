@@ -15,6 +15,7 @@ from apiTest.authorizationkey import *
 
 
 app = Flask(__name__, static_folder='', static_url_path='')
+CORS(app)
 
 # ==PostgreSQL
 # conn = psycopg2.connect(
