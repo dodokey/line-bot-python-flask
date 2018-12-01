@@ -74,7 +74,7 @@ txttt = ''
 def index():
     global txttt
     msg = txttt
-    txttt = ''
+    # txttt = ''
     return msg
 
 
