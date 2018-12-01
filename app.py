@@ -70,7 +70,10 @@ txttt = ''
 
 @app.route('/', methods=['GET'])
 def index():
-    return txttt
+    global txttt
+    msg = txttt
+    txttt = ''
+    return msg
 
 
 @app.route("/callback", methods=['POST'])
