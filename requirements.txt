@@ -7,3 +7,4 @@ xmltodict
 giphy_client
 beautifulsoup4
 lxml
+Flask-Cors
